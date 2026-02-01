@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>GoogleClon</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <ul class="header__list">
+                <li class="header__item">
+                    <a class="header__link" href="#">Gmail</a>
+                </li>
+                <li class="header__item">
+                    <a class="header__link" href="#">Imágenes</a>
+                </li>
+            </ul>
+            <div class="header__options">
+                <a href="#" class="header__link">
+                    <img src="svg/apps.svg" alt="Apps Icon">
+                </a>
+            </div>
+            <div class="header__account">
+                <a href="#" class="header__link">
+                    <img class="header__account--wide" src="img/SilverSurferG-Icon.jpg" alt="Account Icon">
+                </a>   
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="main__title">
+            <h1 class="main__title-text">Google</h1>
+        </section>
+        <section class="main__inputs">
+            <div class="main__search-bar">
+                <div class="main__serach-bar main__search-bar--left">
+                    <label for="main__file-input">
+                        <img class="main__icon" src="svg/plus.svg" alt="Addition File Icon">
+                    </label>
+                    <input class="main__file-input main__file-input--hidden" type="file" id="main__file-input">
+                    <input class="main__search-input" type="search">
+                </div>
+                <div class="main__search-bar main_search-bar--right">
+                    <img class="main__icon" src="svg/microphone.svg" alt="Microphone Icon">
+                    <img class="main__icon" src="svg/scan-search.svg" alt="Image Search">
+                    <button class="main__button">
+                        <img class="main__icon" src="svg/search.svg" alt="Search IA">
+                        <p class="main__button-text">Modo IA</p>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__top"><p class="footer__text">Colombia</p></div>
+        <div class="footer__bottom">
+            <ul class="footer__list footer__list--left">
+                <li class="footer__item">Sobre Google</li>
+                <li class="footer__item">Publicidad</li>
+                <li class="footer__item">Negocios</li>
+                <li class="footer__item">Cómo funciona la Búsqueda</li>
+            </ul>
+            <ul class="footer__list footer__list--right">
+                <li class="footer__item">Privacidad</li>
+                <li class="footer__item">Condiciones</li>
+                <li class="footer__item">Configuración</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
