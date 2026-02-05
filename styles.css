@@ -1,12 +1,11 @@
+/* ===================================
+    Reset y estilos globales
+=================================== */
+
 *{
     margin: 0;
     padding: 0;
-    box-sizing: bor;
-}
-
-.header__account--wide{
-    width: 40px;
-    border-radius: 50%;
+    box-sizing: border-box;
 }
 
 body{
@@ -17,23 +16,20 @@ body{
     "main"
     "footer";
     grid-template-rows: auto 1fr auto;
-    background-color: #000000d8;
+    background-color: #1f1f1f;
     color: white;
     font-family: Arial, sans-serif;
     font-size: 14px;
 }
 
+.header__account--wide{
+    width: 40px;
+    border-radius: 50%;
+}
+
 .header{
     grid-area: header;
     padding: 10px;
-}
-
-.main{
-    grid-area: main;
-}
-
-.footer{
-    grid-area: footer;
 }
 
 .header__nav{
@@ -61,41 +57,48 @@ body{
 
 .main{
     display: flex;
+    grid-area: main;
     flex-direction:column;
-    justify-content: center;
     align-items: center;
     gap: 20px;
+}
+
+.main__inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .main__google-logo{
     width: 300px;
     position: relative;
-    top: 25px;
+    filter: invert(1);
+    clip-path: inset(80px 0px);
+    bottom: -100px;
 }
 
 .main__file-input--hidden{
     display: none;
 }
 
-.main__inputs > .main__search-bar{
+.main__search-bar{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 3px 10px;
-    width: 600px;
-
     background-color: #4d5156;
-    border-radius: 50px;
+    min-height: 50px;
+    padding: 6px 8px;
+    border-radius: 40px;
 }
 
-.main__search-bar .main__search-bar--left{
+.main__search-bar--right, .main__search-bar--left{
     display: flex;
-}
-
-.main__search-bar .main__search-bar--right{
-    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
-    padding: 2px;
+}
+
+.main__search-bar--left{
+    margin-left: 6px;
 }
 
 .main__button{
@@ -130,9 +133,30 @@ body{
     filter: invert(1);
 }
 
+.main__special-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.main__width-google, .main__have-lucky{
+    padding: 0px 16px;
+    height: 36px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    background-color: #303134;
+    color: white;
+}
+
 .footer{
     display: flex;
+    grid-area: footer;
     flex-direction: column;
+    height: 95px;
 }
 
 .footer__top{
@@ -148,10 +172,18 @@ body{
 
 .footer__bottom{
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
     background-color: #00000050;
-    height: 45px;
+    min-height: 45px;
     align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+
+@media(max-width: 1200px){
+    .footer__bottom{
+        justify-content: space-evenly;
+    }
 }
 
 .footer__list{
