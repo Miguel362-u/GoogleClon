@@ -15,33 +15,55 @@ body{
     "header"
     "main"
     "footer";
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: 60px 1fr auto;
     background-color: #1f1f1f;
     color: white;
     font-family: Arial, sans-serif;
     font-size: 14px;
 }
 
-.header__account--wide{
-    width: 40px;
-    border-radius: 50%;
-}
+/*----------------------------------*\
+    #HEADER
+\*----------------------------------*/
 
 .header{
     grid-area: header;
-    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 6px;
+}
+
+.header__account--wide{
+    width: 40px;
+    padding: 4px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+.header__link-icon .header__icon{
+    width: 22px;
+    filter: invert(1);
+    margin-left: 4px;
+}
+
+.header__item{
+    font-size: 13px;
+    margin-bottom: 5px;
 }
 
 .header__nav{
     display: flex;
     justify-content: flex-end;
     gap: 20px;
+    text-align: center;
     align-items: center;
 }
 
 .header__list{
     display: flex;
-    gap: 20px;
+    gap: 14px;
     list-style: none;
 }
 
@@ -54,6 +76,10 @@ body{
 .header__link:visited{
     color: white;
 }
+
+/*----------------------------------*\
+    #MAIN
+\*----------------------------------*/
 
 .main{
     display: flex;
@@ -126,7 +152,7 @@ body{
     margin-left: 10px;
 }
 
-.main__icon, .header__icon{
+.main__icon{
     width: 20px;
     align-content: center;
     text-align: center;
@@ -151,6 +177,10 @@ body{
     background-color: #303134;
     color: white;
 }
+
+/*----------------------------------*\
+    #FOOTER
+\*----------------------------------*/
 
 .footer{
     display: flex;
@@ -178,12 +208,6 @@ body{
     align-items: center;
     justify-content: space-between;
     padding: 0px 20px;
-}
-
-@media(max-width: 1200px){
-    .footer__bottom{
-        justify-content: space-evenly;
-    }
 }
 
 .footer__list{
